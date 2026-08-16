@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (3/3) · sf-t3-1779642675702-033</title>
+  <meta name="description" content="sf-t3-1779642675702-033에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-033.maphoshirts.com/posts-3.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --bg-body: #0a0a0a;
+ --bg-card: #141414;
+ --bg-accent: #ffffff;
+ --text-main: #f5f5f7;
+ --text-muted: #86868b;
+ --text-inverse: #000000;
+ --border-subtle: #333333;
+ --font-mono: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+ --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ --spacing-unit: 8px;
+ --radius-sm: 4px;
+ --radius-md: 12px;
+ }
+
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ background-color: var(--bg-body);
+ color: var(--text-main);
+ font-family: var(--font-sans);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ a {
+ text-decoration: none;
+ color: inherit;
+ transition: opacity 0.2s ease;
+ }
+
+ a:hover {
+ opacity: 0.7;
+ }
+
+ .container {
+ max-width: 1024px;
+ margin: 0 auto;
+ padding: 0 calc(var(--spacing-unit) * 3);
+ }
+
+ /* Navigation */
+ .nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: calc(var(--spacing-unit) * 4) 0;
+ border-bottom: 1px solid var(--border-subtle);
+ margin-bottom: calc(var(--spacing-unit) * 8);
+ }
+
+ .nav-logo {
+ font-family: var(--font-mono);
+ font-weight: 700;
+ font-size: 1.25rem;
+ letter-spacing: -0.02em;
+ }
+
+ .nav-links {
+ display: flex;
+ gap: calc(var(--spacing-unit) * 3);
+ }
+
+ .nav-link {
+ font-size: 0.875rem;
+ font-weight: 500;
+ color: var(--text-muted);
+ }
+
+ .nav-link.active {
+ color: var(--text-main);
+ }
+
+ /* Typography */
+ h1 {
+ font-size: clamp(2.5rem, 5vw, 4.5rem);
+ font-weight: 800;
+ line-height: 1.1;
+ letter-spacing: -0.03em;
+ margin-bottom: calc(var(--spacing-unit) * 3);
+ color: var(--bg-accent);
+ }
+
+ h2 {
+ font-size: 2rem;
+ font-weight: 700;
+ margin-bottom: calc(var(--spacing-unit) * 2);
+ letter-spacing: -0.02em;
+ }
+
+ h3 {
+ font-size: 1.25rem;
+ font-weight: 600;
+ margin-bottom: calc(var(--spacing-unit) * 1);
+ }
+
+ p {
+ font-size: 1.125rem;
+ color: var(--text-muted);
+ margin-bottom: calc(var(--spacing-unit) * 2);
+ max-width: 70ch;
+ }
+
+ .highlight {
+ color: var(--bg-accent);
+ font-weight: 600;
+ }
+
+ /* Hero Section */
+ .hero {
+ padding: calc(var(--spacing-unit) * 8) 0;
+ border-bottom: 1px solid var(--border-subtle);
+ }
+
+ .hero-meta {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--text-muted);
+ margin-bottom: calc(var(--spacing-unit) * 2);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ }
+
+ /* Content Grid */
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: calc(var(--spacing-unit) * 4);
+ margin: calc(var(--spacing-unit) * 8) 0;
+ }
+
+ /* Cards */
+ .card {
+ background-color: var(--bg-card);
+ border: 1px solid var(--border-subtle);
+ border-radius: var(--radius-md);
+ padding: calc(var(--spacing-unit) * 4);
+ transition: transform 0.3s ease, border-color 0.3s ease;
+ }
+
+ .card:hover {
+ transform: translateY(-4px);
+ border-color: var(--text-muted);
+ }
+
+ .card-icon {
+ font-family: var(--font-mono);
+ font-size: 1.5rem;
+ margin-bottom: calc(var(--spacing-unit) * 2);
+ color: var(--bg-accent);
+ }
+
+ /* Pricing Table Style */
+ .pricing-row {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: calc(var(--spacing-unit) * 2) 0;
+ border-bottom: 1px solid var(--border-subtle);
+ }
+
+ .pricing-row:last-child {
+ border-bottom: none;
+ }
+
+ .price-tag {
+ font-family: var(--font-mono);
+ font-weight: 700;
+ color: var(--bg-accent);
+ }
+
+ /* FAQ Section */
+ .faq-item {
+ margin-bottom: calc(var(--spacing-unit) * 3);
+ }
+
+ .faq-question {
+ font-weight: 600;
+ color: var(--text-main);
+ margin-bottom: calc(var(--spacing-unit) * 1);
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ }
+
+ .faq-answer {
+ color: var(--text-muted);
+ font-size: 0.95rem;
+ }
+
+ /* Footer */
+ .footer {
+ margin-top: calc(var(--spacing-unit) * 12);
+ padding: calc(var(--spacing-unit) * 6) 0;
+ border-top: 1px solid var(--border-subtle);
+ text-align: center;
+ font-size: 0.875rem;
+ color: var(--text-muted);
+ }
+
+ .btn-cta {
+ display: inline-block;
+ background-color: var(--bg-accent);
+ color: var(--text-inverse);
+ padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+ border-radius: var(--radius-sm);
+ font-weight: 700;
+ margin-top: calc(var(--spacing-unit) * 4);
+ font-family: var(--font-mono);
+ }
+
+ .btn-cta:hover {
+ opacity: 0.9;
+ transform: scale(1.02);
+ }
+
+ </style>
+  <meta property="og:title" content="글 목록 (3/3) · sf-t3-1779642675702-033">
+  <meta property="og:description" content="sf-t3-1779642675702-033에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-033.maphoshirts.com/posts-3.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 42개 · 3/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-002-1y0jvl7.html">SEO 오토파일럿 가격 솔직 후기</a>
+        <p class="post-item__summary">최근 디지털 마케팅 환경에서 검색 엔진 최적화는 선택이 아닌 필수가 되었습니다. 특히 마포 지역에서 서버 웜업을 진행하는 기업이나 개인 사업자라면 검색 엔진의 신뢰도를 높이는 작업이 매우 중요합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-001-1y0jvl7.html">SEO 오토파일럿 가격 관련 추천 정보</a>
+        <p class="post-item__summary">아, 진짜... 프리미엄 분유와 일반 분유의 DHA 함량이 2023년부터 변경된 것에 대해 알아보자. 이 변화는 엄청난 영양학적 의미를 내포하고 있다.</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <span class="pager__current">3</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
